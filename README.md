@@ -1,5 +1,13 @@
 # Proyecto final Sprint I
 
+## Integrantes
+
+- Engie Lorena Hernandez Lopez
+- Diego Mauricio Lipez Lipez
+- Jose Fernando Del valle Henao
+- Sergio Vargas
+- Samuel David Rojas Valencia (DESAPARECIDO)
+
 Desarrollar un sitio web que conste de 5 secciones, cada sección deberá ser realizada por un estudiante. Los diferentes elementos del sitio web contarán con estilos personalizados creados por los estudiantes y deberán estar condensados en una sola hoja de estilos.
 
 Para iniciar con el desarrollo del sitio web, los estudiantes deberán definir previamente aspectos como ancho del sitio (mínimo 1200px), la información a presentar en el sitio web, diseñar un mockup, borrador o bosquejo, también descargar, diseñar o crear los recursos a utilizar como imágenes, iconos, logos, entre otros y finalmente asignar responsable a cada sección.
