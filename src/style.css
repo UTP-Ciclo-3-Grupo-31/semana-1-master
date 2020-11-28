@@ -1,12 +1,17 @@
 header{
     background: url(img/banner.jpg);
 }
+header img{
+    width: 100px;
+}
+header h2{
+    color: white;
+}
+.flex-container{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
 
-  .flex-container{
-      display: flex;
-      flex-flow: row;
-        justify-content: space-around;
-        align-items: center;
-
-    height: 200px;
-  }
+height: 200px;
+}
