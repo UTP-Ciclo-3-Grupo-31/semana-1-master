@@ -7,11 +7,14 @@ header img{
 header h2{
     color: white;
 }
+header a{
+    color: white;
+}
 .flex-container{
     display: flex;
     flex-flow: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-
-height: 200px;
+    height: 200px;
+    
 }
