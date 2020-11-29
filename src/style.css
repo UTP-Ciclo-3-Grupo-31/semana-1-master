@@ -190,3 +190,12 @@ header a{
     height: 200px;
     
 }
+
+
+.footer{
+    background-color: #b4b7be;
+    color: black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
