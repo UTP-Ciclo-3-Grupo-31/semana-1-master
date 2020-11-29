@@ -6,7 +6,7 @@
 - Diego Mauricio Lipez Lipez
 - Jose Fernando Del valle Henao
 - Sergio Vargas
-- Samuel David Rojas Valencia (DESAPARECIDO)
+- Esteban Duran Rojas
 
 Desarrollar un sitio web que conste de 5 secciones, cada sección deberá ser realizada por un estudiante. Los diferentes elementos del sitio web contarán con estilos personalizados creados por los estudiantes y deberán estar condensados en una sola hoja de estilos.
 
