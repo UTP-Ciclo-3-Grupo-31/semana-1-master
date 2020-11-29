@@ -1,0 +1,33 @@
+header{
+    background: url(img/banner.jpg);
+}
+header img{
+    width: 100px;
+}
+header h2{
+    color: white;
+}
+.news{
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row;
+    flex-wrap: wrap;
+    background-color: aqua;
+}
+.news-data{
+    border-radius: 20px;
+    border: 2px solid black;
+    background-color: gray;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    padding: 2%;
+    width: 40%;
+    align-content: space-around;
+}
+.news-image img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 120px;
+}
