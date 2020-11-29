@@ -1,0 +1,59 @@
+header{
+    background: url(img/banner.jpg);
+}
+header img{
+    width: 100px;
+}
+header h2{
+    color: white;
+}
+.flex-container{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+
+height: 200px;
+}
+.Integrantes{
+    background-color: rgb(51,122,183);
+    display:flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 2% 0% 2% 0%;
+    
+    
+}
+
+.Integrante{
+    width: 20%; 
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: antiquewhite; 
+    text-align: center;
+    padding-left: 2%;
+    padding-right: 2%;
+    box-shadow: 10px 5px 5px black;
+    
+    
+}
+.Integrante:hover{
+    scale: 1.1;
+
+}
+.Integrante__titulo{
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: darkslategray;
+}
+
+.Integrante__parrafo{
+    text-align:center ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: teal;
+}
+.Integrante__img{
+    padding: 5%;
+   
+}

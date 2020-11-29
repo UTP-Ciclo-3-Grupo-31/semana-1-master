@@ -3,11 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi primera pagina web</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>TecnoInfo</title>
 </head>
 <body>
     <header>
-        <nav></nav>
+        <div class="flex-container">
+            <div class="flex-item">
+                <img src="img/codeLogo.png">
+            </div>
+            <h2>Equipo 31<br>Aprender es querer</h2>
+            <nav class="flex-item" id="home">
+                <ul>
+                    <li  href="#home" class="btn btn-primary item">Inicio</li>
+                    <li href="#services" class="btn btn-primary item">Servicios</li>
+                    <li href="#news" class="btn btn-primary item">Noticias</li>
+                    <li href="#team" class="btn btn-primary item">Equipo</li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         <div id="services">
@@ -18,7 +40,46 @@
 
         </div>
 
-        <div id="team">
+        <div id="team" class="Integrantes">
+        
+            <div class="Integrante">
+                
+                <img class="Integrante__img" src="img/Avatar1.png" alt="Intetgrante_1">
+                <h3 class="Integrante__titulo">Sergio Vargas</h3>
+                <p class="Integrante__parrafo">Programador,vive en Bogotá,
+                    le gusta Jugar con electrónica, volar drones y le apasionan las motos!</p>
+            </div>
+            <div class="Integrante">
+                
+                <img class="Integrante__img" src="img/Avatar2.png" alt="Intetgrante_2">
+            
+                <h3 class="Integrante__titulo">Diego Lipez</h3>
+                <p class="Integrante__parrafo">Ingeniero electricista de la Universidad Industrial de Santander,
+                    nacido en Bucaramanga actualmente vive en Bogotá, le gustan las caminatas por el campo 
+                    y jugar minecraft con su hija.</p>
+            </div>
+            <div class="Integrante">
+                <img class="Integrante__img" src="img/Avatar3.png" alt="Integrante_3">
+                <h3 class="Integrante__titulo">Jose del Valle
+                </h3>
+                <p class="Integrante__parrafo">Ingeniero de Control de la Universidad Nacional de Colombia, 
+                    nacido en Itagüí vive actualmente en Medellín le gusta jugar vídeo juegos</p>
+            </div>
+            <div class="Integrante">
+                <img class="Integrante__img" src="img/Avatar4.png" alt="Integrante_4">
+                <h3 class="Integrante__titulo">Esteban Durán</h3>
+                <p class="Integrante__parrafo">Ingeniero Químico de la Universidad de Antioquia, 
+                    vive en Medellín, le gusta hacer deporte, leer y el cine</p>
+            </div>
+            <div class="Integrante">
+                <img class="Integrante__img" src="img/Avatar5.png" alt="Integrante_5">
+                <h3 class="Integrante__titulo">Lorena Hernandez</h3>
+                <p class="Integrante__parrafo">Bogotana, tecnologa en gastronomia de la Universitaria
+                    Agustiniana, creativa, vive en busqueda constante de conocimiento,
+                    casada tiene una hija, apasionada por el arte, vive en la ciudad de Bogota
+                    y le gusta explorar rincones gastronomicos poco conocidos de esta ciudad.
+                </p>
+            </div>
 
         </div>
     </main>
