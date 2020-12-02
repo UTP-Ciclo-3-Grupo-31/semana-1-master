@@ -12,6 +12,10 @@ header img{
 header h2{
     color: white;
 }
+
+.img-noticia{
+    width: 70%;
+}
 .news{
     display: flex;
     justify-content: space-evenly;
