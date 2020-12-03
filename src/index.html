@@ -11,7 +11,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <title>TecnoInfo</title>
 </head>
 <body>
@@ -90,77 +91,102 @@
             </div>
         </div>
 
-<!--Section 3 - news-->
-<div id="news">
-        <section>
-            <h2 class="news-title">Noticias</h2>
-            <div class="news">
-                <div class="news-data">
-                    <div class="news-image">
-                        <img src="img/new1.jpg"> 
-                    </div>
-                    <div class="news-text">
-                        <h3 class="news-title">Google utiliza la Inteligencia Artificial para que puedas escribir ¡como un gran poeta!</h3>
-                        <hr>
-                        <p class="news-info" style="margin:0; padding:0;">La compañía creó una página denominada Verso 
-                            por Verso en la que, gracias a la Inteligencia Artificial, puedes adaptar tus textos al estilo 
-                            de los grandes.
-                        </p>
-                        <span class="news-url"><a href="https://www.fayerwayer.com/2020/11/google-inteligencia-artificial-poesia/">Leer noticia completa >></a></span>
-                    </div>
-                </div>
-                <div class="news-data">
-                    <div class="news-image">
-                        <img src="img/new2.jpg">
-                        <i class="fas fa-ambulance news-logo" style="font-size:150px"></i>
-                    </div>
-                    <div class="news-text">
-                        <h3 class="news-title">En el improbable caso de que tengamos que vender el planeta, 
-                            ¿cuánto costaría la Tierra?</h3>
-                        <hr>
-                        <p class="news-info" style="margin:0; padding:0;">Como informan en Treehugger, el investigador 
-                            Greg Laughlin, profesor asistente de astronomía y astrofísica de la Universidad de 
-                            California, Santa Cruz, se puso manos a la obra tratando de desarrollar una fórmula especial 
-                            que permitiera poner “precio” al espacio que habitamos.
-                        </p>
-                        <span class="news-url"><a href="https://es.gizmodo.com/en-el-improbable-caso-de-que-tengamos-que-vender-el-pla-1845763943">Leer noticia completa >></a></span>
-                    </div>
-                </div>
-                <div class="news-data">
-                    <div class="news-image">
-                        <img src="img/new3.jpg">
-                        <i class="fas fa-ambulance news-logo" style="font-size:150px"></i>
-                    </div>
-                    <div class="news-text">
-                        <h3 class="news-title">Microsoft Edge le quita usuarios a Chrome</h3>
-                        <hr>
-                        <p class="news-info" style="margin:0; padding:0;">El navegador, además, de ser el predeterminado 
-                            en los computadores Windows, ha tenido varias actualizaciones para atraer más a los usuarios. 
-                            En una de las últimas, permite poner las pestañas de manera vertical (a uno de los costados 
-                            laterales de la ventana), en lugar de la parte posterior, explica el portal Forbes.
-                        </p>
-                        <span class="news-url"><a href="https://www.enter.co/chips-bits/apps-software/microsoft-edge-le-quita-usuarios-a-chrome/">Leer noticia completa >></a></span>
-                    </div>
-                </div>
-                <div class="news-data">
-                    <div class="news-image">
-                        <img src="img/new4.jpg">
-                        <i class="fas fa-ambulance news-logo" style="font-size:150px"></i>
-                    </div>
-                    <div class="news-text">
-                        <h3 class="news-title">Se destapan las cartas de la conectividad rural en Colombia</h3>
-                        <hr>
-                        <p class="news-info" style="margin:0; padding:0;">Este viernes se adjudicará la operación de 10.000 
-                            sitios, principalmente escuelas, conectados a internet en los 32 departamentos. 
-                            Aprender las lecciones que dejaron los Kioscos Vive Digital, uno de los llamados del sector.
-                        </p>
-                        <span class="news-url"><a href="https://www.elespectador.com/noticias/economia/mintic-adjudicara-la-conexion-a-internet-de-10000-zonas-rurales/">Leer noticia completa >></a></span>
+        <!--Section 3 - news-->
+        <div class="container" id="noticias">
+            <div class="row">
+                <div class="col-md-6" v-for="noticia in news">
+                    <h5 >
+                    {{ noticia[0]}}
+                    </h5>
+                    <img class=" img-noticia" :src="noticia[2]">
+                    <img class=" img-noticia" v-bind:src="noticia[2]">
+                    <p>
+                        {{ noticia[1]}}
+                    </p>
+                    <div class="row">
+                        <a class="col-md-5" target="_blank" v-bind:href="noticia[3]">leer mas...</a>
+                        <h5 class="col-md-5" >publicado el {{noticia[4]}}</h5>
                     </div>
                 </div>
             </div>
-        </section>
-<!--Fin sección 3 "news"-->
-</div>
+        </div>
+<!--
+        <div id="news">
+                <section>
+                    <h2 class="news-title">Noticias</h2>
+                    <div class="news">
+                        <div class="news-data">
+                            <div class="news-image">
+                                <img src="img/new1.jpg"> 
+                            </div>
+                            <div class="news-text">
+                                <h3 class="news-title">Google utiliza la Inteligencia Artificial para que puedas escribir ¡como un gran poeta!</h3>
+                                <hr>
+                                <p class="news-info" style="margin:0; padding:0;">La compañía creó una página denominada Verso 
+                                    por Verso en la que, gracias a la Inteligencia Artificial, puedes adaptar tus textos al estilo 
+                                    de los grandes.
+                                </p>
+                                <span class="news-url"><a href="https://www.fayerwayer.com/2020/11/google-inteligencia-artificial-poesia/">Leer noticia completa >></a></span>
+                            </div>
+                        </div>
+                        <div class="news-data">
+                            <div class="news-image">
+                                <img src="img/new2.jpg">
+                                <i class="fas fa-ambulance news-logo" style="font-size:150px"></i>
+                            </div>
+                            <div class="news-text">
+                                <h3 class="news-title">En el improbable caso de que tengamos que vender el planeta, 
+                                    ¿cuánto costaría la Tierra?</h3>
+                                <hr>
+                                <p class="news-info" style="margin:0; padding:0;">Como informan en Treehugger, el investigador 
+                                    Greg Laughlin, profesor asistente de astronomía y astrofísica de la Universidad de 
+                                    California, Santa Cruz, se puso manos a la obra tratando de desarrollar una fórmula especial 
+                                    que permitiera poner “precio” al espacio que habitamos.
+                                </p>
+                                <span class="news-url"><a href="https://es.gizmodo.com/en-el-improbable-caso-de-que-tengamos-que-vender-el-pla-1845763943">Leer noticia completa >></a></span>
+                            </div>
+                        </div>
+                        <div class="news-data">
+                            <div class="news-image">
+                                <img src="img/new3.jpg">
+                                <i class="fas fa-ambulance news-logo" style="font-size:150px"></i>
+                            </div>
+                            <div class="news-text">
+                                <h3 class="news-title">Microsoft Edge le quita usuarios a Chrome</h3>
+                                <hr>
+                                <p class="news-info" style="margin:0; padding:0;">El navegador, además, de ser el predeterminado 
+                                    en los computadores Windows, ha tenido varias actualizaciones para atraer más a los usuarios. 
+                                    En una de las últimas, permite poner las pestañas de manera vertical (a uno de los costados 
+                                    laterales de la ventana), en lugar de la parte posterior, explica el portal Forbes.
+                                </p>
+                                <span class="news-url"><a href="https://www.enter.co/chips-bits/apps-software/microsoft-edge-le-quita-usuarios-a-chrome/">Leer noticia completa >></a></span>
+                            </div>
+                        </div>
+                        <div class="news-data">
+                            <div class="news-image">
+                                <img src="img/new4.jpg">
+                                <i class="fas fa-ambulance news-logo" style="font-size:150px"></i>
+                            </div>
+                            <div class="news-text">
+                                <h3 class="news-title">Se destapan las cartas de la conectividad rural en Colombia</h3>
+                                <hr>
+                                <p class="news-info" style="margin:0; padding:0;">Este viernes se adjudicará la operación de 10.000 
+                                    sitios, principalmente escuelas, conectados a internet en los 32 departamentos. 
+                                    Aprender las lecciones que dejaron los Kioscos Vive Digital, uno de los llamados del sector.
+                                </p>
+                                <span class="news-url"><a href="https://www.elespectador.com/noticias/economia/mintic-adjudicara-la-conexion-a-internet-de-10000-zonas-rurales/">Leer noticia completa >></a></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        </div>-->
+
+        <div class="container" id="estudiantes">
+            <div class="row">
+                <h2>{{estudiante['nombre']}}</h2>
+                Codigo: {{estudiante['codigo']}}
+            </div>
+        </div>
 
         <div id="team" class="Integrantes">
         
@@ -243,6 +269,6 @@
             </subFooter>
         </div>
     </footer>
-
+<script src="./app.js"></script>
 </body>
 </html>
