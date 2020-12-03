@@ -94,10 +94,11 @@
         <!--Section 3 - news-->
         <div class="container" id="noticias">
             <div class="row">
-                <div class="col-md-4" v-for="noticia in news">
-                    <h3 >
+                <div class="col-md-6" v-for="noticia in news">
+                    <h5 >
                     {{ noticia[0]}}
-                    </h3>
+                    </h5>
+                    <img class=" img-noticia" :src="noticia[2]">
                     <img class=" img-noticia" v-bind:src="noticia[2]">
                     <p>
                         {{ noticia[1]}}
@@ -109,7 +110,7 @@
                 </div>
             </div>
         </div>
-
+<!--
         <div id="news">
                 <section>
                     <h2 class="news-title">Noticias</h2>
@@ -178,7 +179,13 @@
                         </div>
                     </div>
                 </section>
-        <!--Fin sección 3 "news"-->
+        </div>-->
+
+        <div class="container" id="estudiantes">
+            <div class="row">
+                <h2>{{estudiante['nombre']}}</h2>
+                Codigo: {{estudiante['codigo']}}
+            </div>
         </div>
 
         <div id="team" class="Integrantes">

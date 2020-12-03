@@ -1,8 +1,8 @@
-const cantidadArticulos = 6;
+const cantidadArticulos = 20;
 var listadoArticulos = [];
 
 const obtenerArticulos = async () => {
-    const resultText = await fetch('http://newsapi.org/v2/top-headlines?country=co&apiKey=5f3c419ec6044044ac2462c9ad164194' ,{
+    const resultText = await fetch('http://newsapi.org/v2/top-headlines?country=co&category=technology&apiKey=5f3c419ec6044044ac2462c9ad164194' ,{
     method:'GET',
     });
     let articulosJSON = await resultText.json();
@@ -18,13 +18,32 @@ const obtenerArticulos = async () => {
         }
     }
 }
-
 obtenerArticulos();
 
+
+//parte de estudiantes
+let est1 = {
+    codigo: 1,
+    nombre: 'Lucas Mera',
+    descripcion: 'Lorem ipsum dolor sit amet, consectetur adipiscing',
+    rol: 'Desarrollador backend',
+    image: 'path/to/image'
+    };
+
+
+    //DOCUMENTACION DE VUE
+    //https://es.vuejs.org/v2/guide/syntax.html
 var noticias = new Vue({
     el: '#noticias',
     data: {
-        news: listadoArticulos
+        news: listadoArticulos,
+    }
+  })
+
+var estudiantesVue = new Vue({
+    el: '#estudiantes',
+    data: {
+        estudiante:est1
     }
   })
 /*
